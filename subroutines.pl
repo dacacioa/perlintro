@@ -25,3 +25,19 @@ sub reassign {
 
 reassign($x);
 print $x; # "42"
+
+#Like other Perl expressions, subroutine calls may display contextual behaviour. You can use the wantarray function (which should be called wantlist but never mind) to detect what context the subroutine is being evaluated in, and return a result appropriate to that context:
+
+sub contextualSubroutine {
+	# Caller wants a list. Return a list
+	return ("Everest", "K2", "Etna") if wantarray;
+
+	# Caller wants a scalar. Return a scalar
+	return 3;
+}
+
+my @array = contextualSubroutine();
+print @array; # "EverestK2Etna"
+
+my $scalar = contextualSubroutine();
+print $scalar; # "3"
