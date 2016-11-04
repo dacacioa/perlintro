@@ -37,7 +37,7 @@ sub contextualSubroutine {
 }
 
 my @array = contextualSubroutine();
-print @array; # "EverestK2Etna"
+print @array."\n"; # "EverestK2Etna"
 
 my $scalar = contextualSubroutine();
-print $scalar; # "3"
+print $scalar."\n"; # "3"
