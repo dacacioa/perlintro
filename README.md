@@ -1,3 +1,3 @@
 # perlintro
 
-<h1> Perl language intro notes </h1>
+<h3> Perl language intro notes </h3>
