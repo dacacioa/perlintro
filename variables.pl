@@ -64,6 +64,22 @@ print 'Hello $string'."\n";  # "Hello $string"
 print "\@array"."\n";        # "@array"
 print '@array'."\n";         # "@array"
 
+#Creating new arrays from old. Perl provides the following functions which act on arrays to create other arrays.
+
+#The join function concatenates many strings into one:
+
+my @elements = ("Antimony", "Arsenic", "Aluminum", "Selenium");
+print @elements;             # "AntimonyArsenicAluminumSelenium"
+print "@elements";           # "Antimony Arsenic Aluminum Selenium"
+print join(", ", @elements); # "Antimony, Arsenic, Aluminum, Selenium"
+
+#In list context, the reverse function returns a list in reverse order. In scalar context, reverse concatenates the whole list together and then reverses it as a single word.
+
+print reverse("Hello", "World");        # "WorldHello"
+print reverse("HelloWorld");            # "HelloWorld"
+print scalar reverse("HelloWorld");     # "dlroWolleH"
+print scalar reverse("Hello", "World"); # "dlroWolleH"
+
 # Hash (diccionarios)
 
 my %scientists = (
